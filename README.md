@@ -92,4 +92,4 @@ The dock follows the primary monitor; it does not create a second bar on additio
 
 The implementation targets the GNOME 50 API generation. See the official [GNOME 50 porting guide](https://gjs.guide/extensions/upgrading/gnome-shell-50.html).
 
-License: **GPL-2.0-or-later**.
+License: **MIT**.
