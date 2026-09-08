@@ -1,5 +1,8 @@
 # GDX Dock
 
+<img width="1920" height="1200" alt="Bildschirmfoto vom 2026-09-08 10-25-25" src="https://github.com/user-attachments/assets/0d581178-1dad-4246-aeaa-fdeb79ca603c" />
+
+
 **GDX** stands for **GNOME Desktop eXtension**.
 
 A standalone **GNOME Shell 50** extension that brings your apps, workspaces and native system controls into a full-width bottom dock. Mint on dark graphite, adjustable colors and subtle animations. No webview or extra desktop process.
