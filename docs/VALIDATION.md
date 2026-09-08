@@ -2,7 +2,7 @@
 
 ## Runtime environment
 
-The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
+The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG data, configuration, cache and runtime directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
 
 ## Functional checks
 

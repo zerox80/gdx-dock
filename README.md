@@ -64,7 +64,7 @@ npm run pack
 npm run test:shell
 ```
 
-Shell tests use a separate session bus and temporary XDG directories. They do not modify the current desktop's settings. Build output goes to `dist/`; generated screenshots and logs go to `artifacts/`. Neither directory is committed. See [Validation](docs/VALIDATION.md).
+Shell tests use a separate session bus and temporary XDG data, configuration, cache and runtime directories. They do not modify the current desktop's settings. Build output goes to `dist/`; generated screenshots and logs go to `artifacts/`. Neither directory is committed. See [Validation](docs/VALIDATION.md).
 
 | Directory | Purpose |
 | --- | --- |

@@ -18,6 +18,10 @@ function assert(condition, message) {
 
 export async function run() {
     const path = Gio.File.new_for_uri(import.meta.url).get_parent().get_parent().get_parent().get_path();
+    const runtime = Gio.File.new_for_path(GLib.get_user_runtime_dir());
+    assert(runtime.get_basename() === 'runtime' &&
+        runtime.get_parent().get_basename().startsWith('gdx-dock-test-'),
+        'test compositor uses its own runtime directory');
     const input = new Input();
     await Scripting.sleep(1800);
     Main.overview.hide();
