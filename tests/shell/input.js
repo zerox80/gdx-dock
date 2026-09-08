@@ -40,6 +40,28 @@ export class Input {
         await Scripting.sleep(300);
     }
 
+    async moveTo(x, y) {
+        this.seat.warp_pointer(x, y);
+        this.pointer.notify_absolute_motion(GLib.get_monotonic_time(), x, y);
+        await Scripting.sleep(80);
+    }
+
+    async beginDrag(actor) {
+        const [x, y] = actor.get_transformed_position();
+        const [width, height] = actor.get_transformed_size();
+        await this.moveTo(x + width / 2, y + height / 2);
+        this.pointer.notify_button(GLib.get_monotonic_time(),
+            Clutter.BUTTON_PRIMARY, Clutter.ButtonState.PRESSED);
+        await Scripting.sleep(220);
+        await this.moveTo(x + width / 2 + 20, y + height / 2);
+    }
+
+    async endDrag() {
+        this.pointer.notify_button(GLib.get_monotonic_time(),
+            Clutter.BUTTON_PRIMARY, Clutter.ButtonState.RELEASED);
+        await Scripting.sleep(350);
+    }
+
     async typeText(text) {
         for (const character of text) {
             const key = character.codePointAt(0);

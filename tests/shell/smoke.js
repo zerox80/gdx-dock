@@ -9,6 +9,7 @@ import * as Scripting from 'resource:///org/gnome/shell/ui/scripting.js';
 import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js';
 import {Input} from './input.js';
 import {checkShortcuts} from './shortcuts.js';
+import {checkDragging, checkDragScrolling} from './dragging.js';
 
 function assert(condition, message) {
     if (!condition)
@@ -80,6 +81,14 @@ export async function run() {
     await Scripting.sleep(1000);
     const fixtureApp = controller.catalog.system.lookup_app('org.example.GDXDockTest.desktop');
     assert(fixtureApp.get_windows().length > 0, 'pointer click launches a real application');
+    if (!fixtureApp.get_windows().includes(global.display.focus_window)) {
+        console.log(`[GDX Dock test] Launch focus: ${JSON.stringify({
+            focus: global.display.focus_window?.get_title(), modalCount: Main.modalCount,
+            launcherOpen: bar.launcher.button.menu.isOpen,
+            windows: global.get_window_actors().map(actor => actor.meta_window.get_title()),
+        })}`);
+        await capture('launch-focus-failure');
+    }
     assert(fixtureApp.get_windows().includes(global.display.focus_window), 'launched app receives focus');
     await input.click(bar.launcher.button);
     bar.launcher.entry.set_text('this-app-does-not-exist-735');
@@ -191,6 +200,7 @@ export async function run() {
     extraWindow.delete(global.get_current_time());
     await Scripting.sleep(200);
     assert(!fixtureButton.count.visible && fixtureButton.runningBar.mapped, 'closing one of two windows hides count and keeps running bar');
+    await checkDragging(bar, input, fixtureApp, assert, capture);
     window.make_fullscreen();
     await Scripting.sleep(250);
     assert(bar.actor.mapped, 'permanent dock remains in fullscreen');
@@ -222,6 +232,7 @@ export async function run() {
         'many pinned apps overflow into a scrollable dock');
     assert(bar.center.x + bar.center.width < bar.right.x,
         'overflow never covers system controls');
+    await checkDragScrolling(bar, input, assert);
     const buttons = [...bar.strip._buttons.values()].sort((a, b) => a.actor.x - b.actor.x);
     for (const edge of [buttons.at(-1), buttons[0]]) {
         edge.actor.grab_key_focus();
@@ -278,7 +289,20 @@ export async function run() {
     controller.settings.set_int('icon-size', 40);
 
     for (let i = 0; i < 3; i++) {
+        const modalCount = Main.modalCount;
+        const oldDrag = state._controller.bar.strip.drag;
+        if (i === 0) {
+            await Scripting.sleep(150);
+            const dragButton = state._controller.bar.strip._buttons.values().next().value;
+            await input.beginDrag(dragButton.actor);
+            assert(oldDrag.source === dragButton, 'drag active before extension cleanup');
+        }
         state.disable();
+        if (i === 0) {
+            await input.endDrag();
+            assert(!oldDrag.source && Main.modalCount === modalCount,
+                'disabling while dragging removes the monitor and releases the modal grab');
+        }
         await Scripting.sleep(150);
         assert(Main.layoutManager.panelBox.visible, `disable ${i + 1} restores top panel`);
         assert(!sizingFile.query_exists(null), 'disable removes the temporary sizing stylesheet');

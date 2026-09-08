@@ -7,8 +7,9 @@ import {Scheduler} from '../core/scheduler.js';
 import {dockEntries, searchApps} from './search.js';
 
 export class AppCatalog {
-    constructor() {
+    constructor(settings) {
         this._scope = new Disposables();
+        this.settings = settings;
         this._scheduler = this._scope.own(new Scheduler());
         this._listeners = new Set();
         this.system = Shell.AppSystem.get_default();
@@ -19,6 +20,7 @@ export class AppCatalog {
         this._scope.connect(this.parental, 'app-filter-changed', () => this.reload());
         this._scope.connect(this.system, 'app-state-changed', () => this._emit());
         this._scope.connect(this.favorites, 'changed', () => this._emit());
+        this._scope.connect(settings, 'changed::running-app-order', () => this._emit());
         this.reload();
     }
 
@@ -65,7 +67,23 @@ export class AppCatalog {
                 id: app.get_id(), name: app.get_name(), app,
             };
         });
+        const order = new Map(this.settings.get_strv('running-app-order')
+            .map((id, index) => [id, index]));
+        running.sort((a, b) => (order.get(a?.id) ?? order.size) - (order.get(b?.id) ?? order.size));
         return dockEntries(this.pinned, running);
+    }
+
+    moveRunningApp(id, position) {
+        const ids = this.dock.filter(entry => !this.favorites.isFavorite(entry.id))
+            .map(entry => entry.id);
+        const index = ids.indexOf(id);
+        if (index < 0 || index === position)
+            return;
+        ids.splice(index, 1);
+        ids.splice(position, 0, id);
+        // Keep the order of closed applications for their next launch, too.
+        const previous = this.settings.get_strv('running-app-order');
+        this.settings.set_strv('running-app-order', [...new Set([...ids, ...previous])]);
     }
 
     destroy() {

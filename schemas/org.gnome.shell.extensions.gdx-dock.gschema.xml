@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
   <schema id="org.gnome.shell.extensions.gdx-dock" path="/org/gnome/shell/extensions/gdx-dock/">
+    <key name="running-app-order" type="as"><default>[]</default><summary>Saved order of unpinned applications</summary></key>
     <key name="icon-size" type="i"><default>40</default><range min="28" max="56"/><summary>App icon size</summary></key>
     <key name="opacity" type="i"><default>94</default><range min="65" max="100"/><summary>Dock opacity in percent</summary></key>
     <key name="accent" type="s"><default>'mint'</default><choices><choice value="mint"/><choice value="lilac"/><choice value="blue"/></choices><summary>Accent color</summary></key>

@@ -13,6 +13,9 @@
 .gdx-workspace-current { width: 19px; height: 5px; border-radius: 3px; background-color: #a2edd1; }
 .gdx-dock { padding: 4px 9px; }
 .gdx-apps { spacing: 4px; }
+.gdx-drop-marker { background-color: #a2edd1; border-radius: 2px; }
+.gdx-drop-marker.gdx-lilac { background-color: #d4b8ff; }
+.gdx-drop-marker.gdx-blue { background-color: #a2caff; }
 .gdx-app { border-radius: 13px; padding: 5px 7px 0; background-color: transparent; transition-duration: 150ms; }
 .gdx-app:hover { background-color: rgba(255,255,255,0.09); }
 .gdx-app.running { background-color: rgba(255,255,255,0.045); }

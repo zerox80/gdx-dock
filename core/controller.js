@@ -26,7 +26,7 @@ export class Controller {
         this.settings = this.extension.getSettings();
         this.sizing = this._scope.own(new SizingTheme(this.extension, this.settings));
         this.sizing.enable();
-        this.catalog = this._scope.own(new AppCatalog());
+        this.catalog = this._scope.own(new AppCatalog(this.settings));
         this.bar = this._scope.own(new BottomBar(this.extension, this.settings, this.catalog));
         this.bar.mount();
         this.native = this._scope.own(new NativePanel(this.bar));

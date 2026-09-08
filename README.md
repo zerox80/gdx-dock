@@ -12,6 +12,7 @@ A standalone **GNOME Shell 50** extension that brings your apps, workspaces and 
 - App launcher with localized app names, search, filters and favorites.
 - Pinned and running apps, persistent running indicators, focused-app highlighting and window counts.
 - App context menus, pinning, reordering, middle-click to open a new window and scrolling to switch windows.
+- Hold the left mouse button and drag app icons left or right to reorder them. An insertion marker shows the drop position; the dock scrolls at either edge. Pinned and running app orders are saved. Drag a running app into the pinned section to pin it. Escape or dropping outside the dock cancels the move.
 - Workspace switcher and native GNOME Wi-Fi, audio, Bluetooth, battery, input, privacy and clock controls. Availability depends on your hardware and GNOME configuration.
 - Calendar and quick settings open above the dock. Notification banners appear at the bottom.
 - Reserved space below maximized windows, with optional visibility over fullscreen windows.

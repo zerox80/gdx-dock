@@ -2,13 +2,15 @@
 import {_, format} from '../core/i18n.js';
 import Clutter from 'gi://Clutter';
 import St from 'gi://St';
+import * as DND from 'resource:///org/gnome/shell/ui/dnd.js';
 import {Disposables} from '../core/disposables.js';
 import {AppMenu} from './appMenu.js';
 import {activateApp, appWindows, cycleWindows} from '../services/windows.js';
 
 export class AppButton {
-    constructor(entry, catalog, settings, tooltip) {
+    constructor(entry, catalog, settings, tooltip, drag) {
         this.entry = entry;
+        this._iconSize = settings.get_int('icon-size');
         this._scope = new Disposables();
         this.actor = new St.Button({
             style_class: 'gdx-app', can_focus: true, track_hover: true,
@@ -33,8 +35,34 @@ export class AppButton {
             x_align: Clutter.ActorAlign.END, y_align: Clutter.ActorAlign.START});
         stack.add_child(this.count);
         this.actor.set_child(stack);
+        this.actor._delegate = this;
         this.menu = this._scope.own(new AppMenu(this.actor, entry, catalog));
+        this._draggable = DND.makeDraggable(this.actor, {
+            timeoutThreshold: 200, dragActorOpacity: 225,
+        });
+        this._scope.connect(this._draggable.startGesture, 'may-recognize', gesture => {
+            const event = gesture.get_point_begin_event();
+            return (event.type() !== Clutter.EventType.BUTTON_PRESS ||
+                event.get_button() === Clutter.BUTTON_PRIMARY) && drag.canDrag(this);
+        });
+        this._scope.connect(this._draggable, 'drag-begin', () => {
+            this._dragging = true;
+            this.menu.menu.close();
+            tooltip.hide();
+            this.icon.remove_all_transitions();
+            this.icon.translation_y = 0;
+            this.actor.opacity = 90;
+            drag.begin(this);
+        });
+        this._scope.connect(this._draggable, 'drag-cancelled', () => drag.clearTarget());
+        this._scope.connect(this._draggable, 'drag-end', () => {
+            this._dragging = false;
+            this.actor.opacity = 255;
+            drag.end(this);
+        });
         this._scope.connect(this.actor, 'clicked', (_actor, button) => {
+            if (this._dragging || drag.source)
+                return;
             tooltip.hide();
             if (button === 3)
                 this.menu.open();
@@ -59,6 +87,8 @@ export class AppButton {
             return Clutter.EVENT_STOP;
         });
         this._scope.connect(this.actor, 'notify::hover', () => {
+            if (this._dragging || drag.source)
+                return;
             if (this.actor.hover)
                 tooltip.show(this.actor, entry.name);
             else
@@ -71,6 +101,14 @@ export class AppButton {
         this._scope.connect(entry.app, 'windows-changed', () => this.update());
         this._scope.connect(global.display, 'notify::focus-window', () => this.update());
         this.update();
+    }
+
+    getDragActor() {
+        return this.entry.app.create_icon_texture(this._iconSize);
+    }
+
+    getDragActorSource() {
+        return this.icon;
     }
 
     update() {
@@ -91,6 +129,12 @@ export class AppButton {
     }
 
     destroy() {
+        // GNOME's draggable has no destroy API. Finish its modal grab before
+        // destroying the source, including during a snap-back animation.
+        if (this._dragging) {
+            this._draggable._cancelDrag(global.get_current_time());
+            this._draggable._dragActor?.destroy();
+        }
         this._scope.destroy();
         this.actor.destroy();
     }

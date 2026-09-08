@@ -4,6 +4,7 @@ import Clutter from 'gi://Clutter';
 import St from 'gi://St';
 import {Disposables} from '../core/disposables.js';
 import {AppButton} from './appButton.js';
+import {AppDrag} from './appDrag.js';
 import {Tooltip} from './tooltip.js';
 
 export class AppStrip {
@@ -20,6 +21,7 @@ export class AppStrip {
         this.box = new St.BoxLayout({style_class: 'gdx-apps',
             y_align: Clutter.ActorAlign.CENTER});
         this.actor.set_child(this.box);
+        this.drag = this._scope.own(new AppDrag(this));
         this._scope.add(catalog.subscribe(() => this.render()));
         this._scope.connect(settings, 'changed::icon-size', () => this.render(true));
         this._scope.connect(this.actor, 'scroll-event', (_actor, event) => {
@@ -38,6 +40,13 @@ export class AppStrip {
     }
 
     render(rebuild = false) {
+        // Keep the source and drop geometry alive until Shell releases its grab.
+        if (this.drag.source) {
+            this._pendingRebuild ||= rebuild;
+            return;
+        }
+        rebuild ||= this._pendingRebuild;
+        this._pendingRebuild = false;
         this.tooltip.hide();
         const entries = this.catalog.dock;
         const ids = new Set(entries.map(entry => entry.id));
@@ -61,7 +70,7 @@ export class AppStrip {
             }
             let button = this._buttons.get(entry.id);
             if (!button) {
-                button = new AppButton(entry, this.catalog, this.settings, this.tooltip);
+                button = new AppButton(entry, this.catalog, this.settings, this.tooltip, this.drag);
                 this._buttons.set(entry.id, button);
                 this.box.insert_child_at_index(button.actor, index);
                 button.actor.connect('key-focus-in', () => {
@@ -93,6 +102,7 @@ export class AppStrip {
     }
 
     destroy() {
+        this._destroying = true;
         for (const button of this._buttons.values())
             button.destroy();
         this._buttons.clear();
