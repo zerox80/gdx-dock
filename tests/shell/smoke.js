@@ -237,6 +237,41 @@ export async function run() {
     global.settings.set_strv('favorite-apps', savedFavorites);
     await Scripting.sleep(200);
 
+    function descendants(actor) {
+        return actor.get_children().flatMap(child => [child, ...descendants(child)]);
+    }
+    const clockLabel = descendants(Main.panel._rightBox).find(actor => actor.has_style_class_name?.('clock'));
+    const statusIcon = descendants(Main.panel._rightBox).find(actor =>
+        actor instanceof St.Icon && actor.has_style_class_name('system-status-icon'));
+    assert(clockLabel && statusIcon, 'native clock and status icon are available for sizing checks');
+    const defaultClockSize = clockLabel.get_theme_node().get_font().get_size();
+    const defaultStatusSize = statusIcon.get_theme_node().get_length('icon-size');
+    controller.settings.set_int('text-scale', 150);
+    controller.settings.set_int('system-icon-size', 32);
+    await Scripting.sleep(350);
+    console.log(`[GDX Dock test] Sizing: ${JSON.stringify({before: defaultClockSize, after: clockLabel.get_theme_node().get_font().get_size(), icon: statusIcon.get_theme_node().get_length('icon-size')})}`);
+    assert(clockLabel.get_theme_node().get_font().get_size() >= defaultClockSize * 1.49,
+        'text setting enlarges the native clock live');
+    assert(statusIcon.get_theme_node().get_length('icon-size') === 32 * bar.scale,
+        'system icon setting enlarges the right-hand indicators live');
+    assert(bar.right.y >= 0 && bar.right.y + bar.right.height <= bar.actor.height,
+        'enlarged system controls fit inside the dock');
+    await input.click(bar.launcher.button);
+    await Scripting.sleep(250);
+    const [, enlargedY] = bar.launcher.button.menu.actor.get_transformed_position();
+    assert(enlargedY >= monitor.y, 'enlarged launcher fits inside the monitor');
+    await capture('larger-text-and-system-icons');
+    bar.launcher.button.menu.close();
+    const sizingFile = controller.sizing._file;
+    controller.settings.reset('text-scale');
+    controller.settings.reset('system-icon-size');
+    await Scripting.sleep(250);
+    assert(clockLabel.get_theme_node().get_font().get_size() === defaultClockSize &&
+        statusIcon.get_theme_node().get_length('icon-size') === defaultStatusSize,
+    'reset restores the original text and system icon sizes');
+    assert(!St.ThemeContext.get_for_stage(global.stage).get_theme().get_custom_stylesheets()
+        .some(file => file.equal(sizingFile)), 'default sizes unload the sizing overrides');
+
     controller.settings.set_int('icon-size', 52);
     await Scripting.sleep(250);
     assert(bar.actor.height === 90 * bar.scale, 'settings resize dock live');
@@ -246,6 +281,7 @@ export async function run() {
         state.disable();
         await Scripting.sleep(150);
         assert(Main.layoutManager.panelBox.visible, `disable ${i + 1} restores top panel`);
+        assert(!sizingFile.query_exists(null), 'disable removes the temporary sizing stylesheet');
         assert(Main.panel._rightBox.get_parent() === Main.panel, 'system actors restored');
         assert(Main.panel.statusArea.dateMenu.container.get_parent() === Main.panel._centerBox,
             'clock restored');

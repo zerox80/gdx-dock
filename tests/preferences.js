@@ -27,6 +27,20 @@ if (settings.get_int('icon-size') !== 48)
 settings.set_int('icon-size', 36);
 if (size.value !== 36)
     throw new Error('Settings did not update preferences');
+for (const [title, key, defaultValue, larger] of [
+    [_('Text size'), 'text-scale', 100, 150],
+    [_('System icon size'), 'system-icon-size', 16, 32],
+]) {
+    const row = widgets.find(widget => widget instanceof Adw.SpinRow && widget.title === title);
+    if (!row || row.value !== defaultValue)
+        throw new Error(`Incorrect sizing default: ${key}`);
+    row.value = larger;
+    if (settings.get_int(key) !== larger)
+        throw new Error(`Sizing preference did not update settings: ${key}`);
+    settings.reset(key);
+    if (row.value !== defaultValue)
+        throw new Error(`Reset did not restore sizing preference: ${key}`);
+}
 const accent = widgets.find(widget => widget instanceof Adw.ComboRow);
 accent.selected = 1;
 if (settings.get_string('accent') !== 'lilac')

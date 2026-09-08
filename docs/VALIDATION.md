@@ -6,7 +6,7 @@ The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. Shell inte
 
 ## Functional checks
 
-- Eleven unit tests cover search normalization, accented characters, German sharp S, metadata search, ranking, empty queries, favorites deduplication, monitor geometry, scaling, bounded dock width reverse-order resource cleanup, reordered translation placeholders and non-Latin search text.
+- Twelve unit tests cover search normalization, accented characters, German sharp S, metadata search, ranking, empty queries, favorites deduplication, monitor geometry, scaling, bounded dock width reverse-order resource cleanup, reordered translation placeholders and non-Latin search text.
 - The isolated Shell suite covers loading, bottom-bar placement, native controls, reserved window space, launcher search, menu placement, calendar, quick settings, notifications, maximized windows, fullscreen behavior, scrolling, resizing and repeated disable/enable cycles.
 - Virtual mouse and keyboard events exercise application launching, focus, context menus, minimizing, new windows, closing windows, shortcuts and restoration of GNOME's original Super-key behavior.
 - GTK4/libadwaita tests construct preferences and check two-way GSettings bindings, accent selection and shortcut validation using an in-memory settings backend.
@@ -16,7 +16,9 @@ The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. Shell inte
 
 The complete Shell suite passes in English and Arabic, including real session-language selection, launcher bounds, and keyboard focus at both ends of the scrolling app list. Arabic revealed two issues that are now fixed: taller font metrics could push the launcher off screen, and horizontal viewport offsets needed to be reversed for right-to-left layouts.
 
-All eleven unit tests pass. All 15 catalogs pass the GJS/GTK language matrix, including regional and missing-language fallback. The extension ZIP contains 15 compiled catalogs. The portability check finds no personal filesystem paths or emoji in publishable project files.
+Sizing checks verify 150% text, 32 px system icons, launcher bounds, exact default restoration and temporary stylesheet cleanup. Both English and Arabic Shell runs pass these checks. The test session uses its own runtime directory; the real document-portal mount remains intact.
+
+All twelve unit tests pass. All 15 catalogs pass the GJS/GTK language matrix, including regional and missing-language fallback. The extension ZIP contains 15 compiled catalogs. The portability check finds no personal filesystem paths or emoji in publishable project files.
 
 ## Reproduce
 
@@ -35,4 +37,4 @@ GNOME 51 has not been validated. Physical monitor hotplug and a real lock screen
 
 Updates require a new login because GNOME 50 caches extension modules. The user's running session is not restarted by the tests.
 
-All 15 translation catalogs and 57 messages per catalog are checked for completeness and format placeholders. GJS and GTK preferences checks cover every catalog, English, an unknown language, regional fallback and language preference lists. This does not replace native-speaker review or visual testing of every language and writing direction.
+All 15 translation catalogs and 61 messages per catalog are checked for completeness and format placeholders. GJS and GTK preferences checks cover every catalog, English, an unknown language, regional fallback and language preference lists. This does not replace native-speaker review or visual testing of every language and writing direction.

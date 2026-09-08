@@ -12,6 +12,15 @@ export function buildPreferences(window, settings) {
         adjustment: new Gtk.Adjustment({lower: 28, upper: 56, step_increment: 2, page_increment: 4})});
     settings.bind('icon-size', size, 'value', Gio.SettingsBindFlags.DEFAULT);
     look.add(size);
+    const textSize = new Adw.SpinRow({title: _('Text size'), subtitle: _('Percent of the default size'),
+        adjustment: new Gtk.Adjustment({lower: 100, upper: 150, step_increment: 5, page_increment: 10})});
+    settings.bind('text-scale', textSize, 'value', Gio.SettingsBindFlags.DEFAULT);
+    look.add(textSize);
+    const systemSize = new Adw.SpinRow({title: _('System icon size'),
+        subtitle: _('Wi-Fi, sound, battery and other status icons'),
+        adjustment: new Gtk.Adjustment({lower: 16, upper: 32, step_increment: 2, page_increment: 4})});
+    settings.bind('system-icon-size', systemSize, 'value', Gio.SettingsBindFlags.DEFAULT);
+    look.add(systemSize);
     const opacity = new Adw.SpinRow({title: _('Opacity'), subtitle: _('Percent'),
         adjustment: new Gtk.Adjustment({lower: 65, upper: 100, step_increment: 1, page_increment: 5})});
     settings.bind('opacity', opacity, 'value', Gio.SettingsBindFlags.DEFAULT);

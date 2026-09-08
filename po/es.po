@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDX Dock 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
-"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"POT-Creation-Date: 2026-09-08 12:11+0200\n"
 "PO-Revision-Date: 2026-09-08 00:00+0000\n"
 "Last-Translator: GDX Dock contributors\n"
 "Language-Team: es\n"
@@ -27,11 +27,11 @@ msgstr "Abrir"
 msgid "New window"
 msgstr "Nueva ventana"
 
-#: dock/appMenu.js:45 search/launcher.js:199
+#: dock/appMenu.js:45 search/launcher.js:212
 msgid "Unpin from dock"
 msgstr "Desanclar del dock"
 
-#: dock/appMenu.js:45 search/launcher.js:199
+#: dock/appMenu.js:45 search/launcher.js:212
 msgid "Pin to dock"
 msgstr "Anclar al dock"
 
@@ -64,78 +64,78 @@ msgstr "Buscar aplicaciones"
 msgid "Apps"
 msgstr "Aplicaciones"
 
-#: search/launcher.js:50
+#: search/launcher.js:51
 msgid "A great start."
 msgstr "Un buen comienzo."
 
-#: search/launcher.js:51
+#: search/launcher.js:52
 msgid "Your apps. One place."
 msgstr "Tus aplicaciones. Un solo lugar."
 
-#: search/launcher.js:54
+#: search/launcher.js:55
 msgid "GDX Dock settings"
 msgstr "Configuración de GDX Dock"
 
-#: search/launcher.js:64
+#: search/launcher.js:65
 msgid "Search for an app…"
 msgstr "Buscar una aplicación…"
 
-#: search/launcher.js:71
+#: search/launcher.js:72
 msgid "All apps"
 msgstr "Todas las aplicaciones"
 
-#: search/launcher.js:71
+#: search/launcher.js:72
 msgid "Pinned"
 msgstr "Ancladas"
 
-#: search/launcher.js:71 search/launcher.js:189
+#: search/launcher.js:72 search/launcher.js:202
 msgid "Running"
 msgstr "En ejecución"
 
-#: search/launcher.js:92
+#: search/launcher.js:93
 msgid "Up/Down: Select; Enter: Open"
 msgstr "Arriba/Abajo: seleccionar; Intro: abrir"
 
-#: search/launcher.js:93
+#: search/launcher.js:94
 msgid "Super · App menu"
 msgstr "Super · Menú de aplicaciones"
 
-#: search/launcher.js:174
+#: search/launcher.js:187
 #, javascript-format
 msgid "Results: %d"
 msgstr "Resultados: %d"
 
-#: search/launcher.js:174
+#: search/launcher.js:187
 #, javascript-format
 msgid "Apps: %d"
 msgstr "Aplicaciones: %d"
 
-#: search/launcher.js:189
+#: search/launcher.js:202
 msgid "Application"
 msgstr "Aplicación"
 
-#: search/launcher.js:199
+#: search/launcher.js:212
 #, javascript-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: search/launcher.js:217
+#: search/launcher.js:230
 msgid "No matching apps."
 msgstr "No se encontraron aplicaciones."
 
-#: search/launcher.js:217
+#: search/launcher.js:230
 msgid "Nothing here yet."
 msgstr "Todavía no hay nada aquí."
 
-#: search/launcher.js:219
+#: search/launcher.js:232
 msgid "Try another name or search term."
 msgstr "Prueba con otro nombre o término de búsqueda."
 
-#: search/launcher.js:219
+#: search/launcher.js:232
 msgid "Use the star to pin apps to your dock."
 msgstr "Usa la estrella para anclar aplicaciones al dock."
 
-#: search/launcher.js:224
+#: search/launcher.js:237
 msgid "Search to find more apps."
 msgstr "Busca para encontrar más aplicaciones."
 
@@ -156,100 +156,116 @@ msgid "Small to large"
 msgstr "De pequeño a grande"
 
 #: preferences/page.js:15
+msgid "Text size"
+msgstr "Tamaño del texto"
+
+#: preferences/page.js:15
+msgid "Percent of the default size"
+msgstr "Porcentaje del tamaño predeterminado"
+
+#: preferences/page.js:19
+msgid "System icon size"
+msgstr "Tamaño de los iconos del sistema"
+
+#: preferences/page.js:20
+msgid "Wi-Fi, sound, battery and other status icons"
+msgstr "Wi-Fi, sonido, batería y otros iconos de estado"
+
+#: preferences/page.js:24
 msgid "Opacity"
 msgstr "Opacidad"
 
-#: preferences/page.js:15
+#: preferences/page.js:24
 msgid "Percent"
 msgstr "Porcentaje"
 
-#: preferences/page.js:20
+#: preferences/page.js:29
 msgid "Accent color"
 msgstr "Color de acento"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Mint"
 msgstr "Menta"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Lilac"
 msgstr "Lila"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Blue"
 msgstr "Azul"
 
-#: preferences/page.js:34
+#: preferences/page.js:43
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: preferences/page.js:36
+#: preferences/page.js:45
 msgid "Show workspaces"
 msgstr "Mostrar áreas de trabajo"
 
-#: preferences/page.js:36
+#: preferences/page.js:45
 msgid "Switch workspaces beside the launcher"
 msgstr "Cambiar de área de trabajo junto al lanzador"
 
-#: preferences/page.js:37
+#: preferences/page.js:46
 msgid "Always visible"
 msgstr "Siempre visible"
 
-#: preferences/page.js:37
+#: preferences/page.js:46
 msgid "Show the dock over fullscreen windows"
 msgstr "Mostrar el dock sobre ventanas a pantalla completa"
 
-#: preferences/page.js:38
+#: preferences/page.js:47
 msgid "Click to minimize"
 msgstr "Pulsar para minimizar"
 
-#: preferences/page.js:38
+#: preferences/page.js:47
 msgid "When a single window is already focused"
 msgstr "Cuando una sola ventana ya tiene el foco"
 
-#: preferences/page.js:39
+#: preferences/page.js:48
 msgid "Animations"
 msgstr "Animaciones"
 
-#: preferences/page.js:39
+#: preferences/page.js:48
 msgid "Raise app icons on hover"
 msgstr "Elevar los iconos al pasar el puntero"
 
-#: preferences/page.js:46
+#: preferences/page.js:55
 msgid "Keyboard and mouse"
 msgstr "Teclado y ratón"
 
-#: preferences/page.js:47
+#: preferences/page.js:56
 msgid ""
 "Right-click: app menu. Middle-click: new window. Scroll: switch windows."
 msgstr ""
 "Clic derecho: menú de la aplicación. Clic central: nueva ventana. "
 "Desplazamiento: cambiar de ventana."
 
-#: preferences/page.js:48
+#: preferences/page.js:57
 msgid "Super key: app menu"
 msgstr "Tecla Super: menú de aplicaciones"
 
-#: preferences/page.js:49
+#: preferences/page.js:58
 msgid ""
 "Press Super to toggle search. Super + W opens the GNOME overview by default."
 msgstr ""
 "Super abre o cierra la búsqueda. Super + W abre la vista general de GNOME de "
 "forma predeterminada."
 
-#: preferences/page.js:51
+#: preferences/page.js:60
 msgid "Additional search shortcut"
 msgstr "Atajo de búsqueda adicional"
 
-#: preferences/page.js:52
+#: preferences/page.js:61
 msgid "Overview shortcut"
 msgstr "Atajo de la vista general"
 
-#: preferences/page.js:68
+#: preferences/page.js:77
 msgid "Custom shortcuts"
 msgstr "Atajos personalizados"
 
-#: preferences/page.js:69
+#: preferences/page.js:78
 msgid ""
 "Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
 "always opens the app menu."

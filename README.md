@@ -54,6 +54,12 @@ You can also manage GDX Dock using GNOME's **Extensions** application. Its inter
 
 Disabling GDX Dock restores GNOME's panel, status indicators, calendar, notification placement and Super-key behavior. GNOME favorites are preserved.
 
+## Text and system icon sizes
+
+Open GDX Dock preferences and use **Text size** (100–150%) and **System icon size** (16–32 logical pixels) under Appearance. Text scaling covers the dock, launcher and dock menus; system icon sizing covers the status indicators on the right. The existing app icon size remains independent.
+
+Defaults remain **100% text**, **16 px system icons** and **40 px app icons**. Changes apply immediately. Set the controls back to these values to restore the original sizing. The launcher and dock adjust their layout to fit larger content. Display scaling is applied by GNOME as usual.
+
 ## Development
 
 ```sh

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GDX Dock 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
-"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"POT-Creation-Date: 2026-09-08 12:11+0200\n"
 "PO-Revision-Date: 2026-09-08 00:00+0000\n"
 "Last-Translator: GDX Dock contributors\n"
 "Language-Team: ko\n"
@@ -27,11 +27,11 @@ msgstr "열기"
 msgid "New window"
 msgstr "새 창"
 
-#: dock/appMenu.js:45 search/launcher.js:199
+#: dock/appMenu.js:45 search/launcher.js:212
 msgid "Unpin from dock"
 msgstr "독에서 고정 해제"
 
-#: dock/appMenu.js:45 search/launcher.js:199
+#: dock/appMenu.js:45 search/launcher.js:212
 msgid "Pin to dock"
 msgstr "독에 고정"
 
@@ -64,78 +64,78 @@ msgstr "앱 검색"
 msgid "Apps"
 msgstr "앱"
 
-#: search/launcher.js:50
+#: search/launcher.js:51
 msgid "A great start."
 msgstr "좋은 시작."
 
-#: search/launcher.js:51
+#: search/launcher.js:52
 msgid "Your apps. One place."
 msgstr "내 앱을 한곳에."
 
-#: search/launcher.js:54
+#: search/launcher.js:55
 msgid "GDX Dock settings"
 msgstr "GDX Dock 설정"
 
-#: search/launcher.js:64
+#: search/launcher.js:65
 msgid "Search for an app…"
 msgstr "앱 검색…"
 
-#: search/launcher.js:71
+#: search/launcher.js:72
 msgid "All apps"
 msgstr "모든 앱"
 
-#: search/launcher.js:71
+#: search/launcher.js:72
 msgid "Pinned"
 msgstr "고정됨"
 
-#: search/launcher.js:71 search/launcher.js:189
+#: search/launcher.js:72 search/launcher.js:202
 msgid "Running"
 msgstr "실행 중"
 
-#: search/launcher.js:92
+#: search/launcher.js:93
 msgid "Up/Down: Select; Enter: Open"
 msgstr "위/아래: 선택; Enter: 열기"
 
-#: search/launcher.js:93
+#: search/launcher.js:94
 msgid "Super · App menu"
 msgstr "Super · 앱 메뉴"
 
-#: search/launcher.js:174
+#: search/launcher.js:187
 #, javascript-format
 msgid "Results: %d"
 msgstr "검색 결과: %d"
 
-#: search/launcher.js:174
+#: search/launcher.js:187
 #, javascript-format
 msgid "Apps: %d"
 msgstr "앱 수: %d"
 
-#: search/launcher.js:189
+#: search/launcher.js:202
 msgid "Application"
 msgstr "프로그램"
 
-#: search/launcher.js:199
+#: search/launcher.js:212
 #, javascript-format
 msgid "%s: %s"
 msgstr "%s: %s"
 
-#: search/launcher.js:217
+#: search/launcher.js:230
 msgid "No matching apps."
 msgstr "일치하는 앱이 없습니다."
 
-#: search/launcher.js:217
+#: search/launcher.js:230
 msgid "Nothing here yet."
 msgstr "아직 아무것도 없습니다."
 
-#: search/launcher.js:219
+#: search/launcher.js:232
 msgid "Try another name or search term."
 msgstr "다른 이름이나 검색어를 사용해 보세요."
 
-#: search/launcher.js:219
+#: search/launcher.js:232
 msgid "Use the star to pin apps to your dock."
 msgstr "별을 사용하여 앱을 독에 고정하세요."
 
-#: search/launcher.js:224
+#: search/launcher.js:237
 msgid "Search to find more apps."
 msgstr "검색으로 더 많은 앱을 찾아보세요."
 
@@ -156,98 +156,114 @@ msgid "Small to large"
 msgstr "작게에서 크게"
 
 #: preferences/page.js:15
+msgid "Text size"
+msgstr "글자 크기"
+
+#: preferences/page.js:15
+msgid "Percent of the default size"
+msgstr "기본 크기에 대한 백분율"
+
+#: preferences/page.js:19
+msgid "System icon size"
+msgstr "시스템 아이콘 크기"
+
+#: preferences/page.js:20
+msgid "Wi-Fi, sound, battery and other status icons"
+msgstr "Wi-Fi, 소리, 배터리 및 기타 상태 아이콘"
+
+#: preferences/page.js:24
 msgid "Opacity"
 msgstr "불투명도"
 
-#: preferences/page.js:15
+#: preferences/page.js:24
 msgid "Percent"
 msgstr "백분율"
 
-#: preferences/page.js:20
+#: preferences/page.js:29
 msgid "Accent color"
 msgstr "강조 색상"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Mint"
 msgstr "민트"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Lilac"
 msgstr "라일락"
 
-#: preferences/page.js:21
+#: preferences/page.js:30
 msgid "Blue"
 msgstr "파랑"
 
-#: preferences/page.js:34
+#: preferences/page.js:43
 msgid "Behavior"
 msgstr "동작"
 
-#: preferences/page.js:36
+#: preferences/page.js:45
 msgid "Show workspaces"
 msgstr "작업 공간 표시"
 
-#: preferences/page.js:36
+#: preferences/page.js:45
 msgid "Switch workspaces beside the launcher"
 msgstr "실행기 옆에서 작업 공간 전환"
 
-#: preferences/page.js:37
+#: preferences/page.js:46
 msgid "Always visible"
 msgstr "항상 표시"
 
-#: preferences/page.js:37
+#: preferences/page.js:46
 msgid "Show the dock over fullscreen windows"
 msgstr "전체 화면 창 위에 독 표시"
 
-#: preferences/page.js:38
+#: preferences/page.js:47
 msgid "Click to minimize"
 msgstr "클릭하여 최소화"
 
-#: preferences/page.js:38
+#: preferences/page.js:47
 msgid "When a single window is already focused"
 msgstr "창이 하나이고 이미 초점이 맞춰져 있을 때"
 
-#: preferences/page.js:39
+#: preferences/page.js:48
 msgid "Animations"
 msgstr "애니메이션"
 
-#: preferences/page.js:39
+#: preferences/page.js:48
 msgid "Raise app icons on hover"
 msgstr "포인터를 올리면 앱 아이콘을 들어 올리기"
 
-#: preferences/page.js:46
+#: preferences/page.js:55
 msgid "Keyboard and mouse"
 msgstr "키보드와 마우스"
 
-#: preferences/page.js:47
+#: preferences/page.js:56
 msgid ""
 "Right-click: app menu. Middle-click: new window. Scroll: switch windows."
 msgstr "오른쪽 클릭: 앱 메뉴. 가운데 클릭: 새 창. 스크롤: 창 전환."
 
-#: preferences/page.js:48
+#: preferences/page.js:57
 msgid "Super key: app menu"
 msgstr "Super 키: 앱 메뉴"
 
-#: preferences/page.js:49
+#: preferences/page.js:58
 msgid ""
 "Press Super to toggle search. Super + W opens the GNOME overview by default."
 msgstr ""
 "Super로 검색을 열거나 닫습니다. 기본적으로 Super + W는 GNOME 활동 개요를 엽니"
 "다."
 
-#: preferences/page.js:51
+#: preferences/page.js:60
 msgid "Additional search shortcut"
 msgstr "추가 검색 바로 가기"
 
-#: preferences/page.js:52
+#: preferences/page.js:61
 msgid "Overview shortcut"
 msgstr "활동 개요 바로 가기"
 
-#: preferences/page.js:68
+#: preferences/page.js:77
 msgid "Custom shortcuts"
 msgstr "사용자 지정 바로 가기"
 
-#: preferences/page.js:69
+#: preferences/page.js:78
 msgid ""
 "Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
 "always opens the app menu."

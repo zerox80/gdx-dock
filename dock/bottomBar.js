@@ -89,8 +89,7 @@ export class BottomBar {
         if (!monitor)
             return;
         const geometry = barGeometry(monitor, this.settings.get_int('icon-size'), this.scale);
-        this.actor.set_position(geometry.x, geometry.y);
-        this.actor.set_size(geometry.width, geometry.height);
+        this.actor.set_width(geometry.width);
         const [, left] = this.left.get_preferred_width(-1);
         const [, right] = this.right.get_preferred_width(-1);
         const [, natural] = this.strip.box.get_preferred_width(-1);
@@ -99,6 +98,12 @@ export class BottomBar {
         const [, leftHeight] = this.left.get_preferred_height(left);
         const [, rightHeight] = this.right.get_preferred_height(right);
         const [, centerHeight] = this.strip.actor.get_preferred_height(width);
+        // Enlarged text and system controls must remain inside the reserved bar.
+        geometry.height = Math.max(geometry.height,
+            Math.ceil(Math.max(leftHeight, rightHeight, centerHeight) + 8 * this.scale));
+        geometry.y = monitor.y + monitor.height - geometry.height;
+        this.actor.set_position(geometry.x, geometry.y);
+        this.actor.set_size(geometry.width, geometry.height);
         const contentHeight = geometry.height;
         this.left.set_position(12 * this.scale, Math.round((contentHeight - leftHeight) / 2));
         this.right.set_position(geometry.width - right - 12 * this.scale,

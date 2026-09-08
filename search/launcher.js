@@ -32,6 +32,7 @@ export class Launcher {
         this._scope = new Disposables();
         this._scheduler = this._scope.own(new Scheduler());
         this.catalog = catalog;
+        this.settings = settings;
         this._filter = 'all';
         this._selected = 0;
         this._rows = [];
@@ -108,22 +109,13 @@ export class Launcher {
                 this._scheduler.cancel('focus');
                 return;
             }
-            const monitor = Main.layoutManager.primaryMonitor;
-            const scale = St.ThemeContext.get_for_stage(global.stage).scale_factor;
-            const width = Math.max(220, Math.min(440, monitor.width / scale - 40));
-            this.content.set_style(`width: ${width}px;`);
-            const height = Math.max(80, Math.min(320, monitor.height / scale - settings.get_int('icon-size') - 400));
-            this.scroll.set_style(`height: ${height}px;`);
             this.entry.set_text('');
             this.render();
-            // Font metrics vary between writing systems. Reserve the actual
-            // translated header/footer height instead of assuming Latin text.
-            const [, buttonY] = this.button.get_transformed_position();
-            const availableHeight = Math.max(80, (buttonY - monitor.y - 24) / scale);
-            const [, preferredHeight] = this.button.menu.actor.get_preferred_height(-1);
-            const overflow = Math.max(0, preferredHeight / scale - availableHeight);
-            this.scroll.set_style(`height: ${Math.max(40, height - overflow)}px;`);
+            this.fitToMonitor();
             this._scheduler.schedule('focus', 120, () => this.entry.grab_key_focus());
+        });
+        this._scope.connect(settings, 'changed', () => {
+            this._scheduler.schedule('fit', 0, () => this.fitToMonitor());
         });
         this._scope.add(catalog.subscribe(() => {
             if (this.button.menu.isOpen)
@@ -135,6 +127,27 @@ export class Launcher {
                 this.button.menu.open();
             }
         });
+    }
+
+    fitToMonitor() {
+        if (!this.button.menu.isOpen)
+            return;
+        const monitor = Main.layoutManager.primaryMonitor;
+        if (!monitor)
+            return;
+        const scale = St.ThemeContext.get_for_stage(global.stage).scale_factor;
+        const textScale = this.settings.get_int('text-scale') / 100;
+        const width = Math.max(220, Math.min(440 * textScale, monitor.width / scale - 40));
+        this.content.set_style(`width: ${width}px;`);
+        const height = Math.max(80, Math.min(320,
+            monitor.height / scale - this.settings.get_int('icon-size') - 400));
+        this.scroll.set_style(`height: ${height}px;`);
+        // Measure translated fonts rather than assuming Latin line heights.
+        const [, buttonY] = this.button.get_transformed_position();
+        const availableHeight = Math.max(80, (buttonY - monitor.y - 24) / scale);
+        const [, preferredHeight] = this.button.menu.actor.get_preferred_height(-1);
+        const overflow = Math.max(0, preferredHeight / scale - availableHeight);
+        this.scroll.set_style(`height: ${Math.max(40, height - overflow)}px;`);
     }
 
     toggle() {

@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
+import {SizingTheme} from './sizingTheme.js';
 import {Disposables} from './disposables.js';
 import {Keybindings} from './keybindings.js';
 import {AppCatalog} from '../services/appCatalog.js';
@@ -15,14 +16,16 @@ export class Controller {
 
     enable() {
         // Two panel owners cannot safely reparent the same GNOME actors.
-        const conflicts = ['dash-to-panel@jderose9.github.com', 'ubuntu-dock@ubuntu.com',
+        const conflicts = ['beauty-dock@local', 'dash-to-panel@jderose9.github.com', 'ubuntu-dock@ubuntu.com',
             'dash-to-dock@micxgx.gmail.com'];
         const active = conflicts.filter(uuid =>
             Main.extensionManager.lookup(uuid)?.state === 1);
         if (active.length)
-            throw new Error(`Bitte zuerst die andere Dock-Extension deaktivieren: ${active.join(', ')}`);
+            throw new Error(`Disable the other dock extension first: ${active.join(', ')}`);
 
         this.settings = this.extension.getSettings();
+        this.sizing = this._scope.own(new SizingTheme(this.extension, this.settings));
+        this.sizing.enable();
         this.catalog = this._scope.own(new AppCatalog());
         this.bar = this._scope.own(new BottomBar(this.extension, this.settings, this.catalog));
         this.bar.mount();

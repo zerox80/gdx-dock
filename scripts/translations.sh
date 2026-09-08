@@ -5,7 +5,7 @@ case "${1:-update}" in
     update)
         mkdir -p po
         xgettext --language=JavaScript --from-code=UTF-8 --keyword=_ \
-            --package-name='GDX Dock' --package-version=1.2.0 \
+            --package-name='GDX Dock' --package-version=1.3.0 \
             --copyright-holder='GDX Dock contributors' \
             --msgid-bugs-address='https://github.com/zerox80/gdx-dock/issues' \
             --output=po/gdx-dock.pot core/*.js dock/*.js search/*.js preferences/*.js

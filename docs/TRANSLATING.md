@@ -4,7 +4,7 @@ GDX Dock uses GNOME's standard Gettext integration. English is the source langua
 
 ## Included languages
 
-All 57 dock-owned interface messages currently have translations in these 15 catalogs:
+All 61 dock-owned interface messages currently have translations in these 15 catalogs:
 
 | Language | Catalog |
 | --- | --- |

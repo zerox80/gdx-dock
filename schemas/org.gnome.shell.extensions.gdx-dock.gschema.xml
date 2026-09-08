@@ -10,5 +10,7 @@
     <key name="animate" type="b"><default>true</default><summary>Animate icons on hover</summary></key>
     <key name="open-launcher" type="as"><default>[]</default><summary>Additional app search shortcut</summary></key>
     <key name="gdx-toggle-overview" type="as"><default>['&lt;Super&gt;w']</default><summary>GNOME overview shortcut</summary></key>
+    <key name="text-scale" type="i"><default>100</default><range min="100" max="150"/><summary>Text size as a percentage of the default</summary></key>
+    <key name="system-icon-size" type="i"><default>16</default><range min="16" max="32"/><summary>System status icon size</summary></key>
   </schema>
 </schemalist>
