@@ -1,6 +1,6 @@
 # GDX Dock
 
-<img width="1920" height="1200" alt="Bildschirmfoto vom 2026-09-08 10-25-25" src="https://github.com/user-attachments/assets/0d581178-1dad-4246-aeaa-fdeb79ca603c" />
+<img width="1920" height="1200" alt="Bildschirmfoto vom 2026-09-08 15-47-38" src="https://github.com/user-attachments/assets/79945c6a-cefb-4bc1-ad07-65f2c5097597" />
 
 
 **GDX** stands for **GNOME Desktop eXtension**.
