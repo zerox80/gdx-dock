@@ -62,11 +62,14 @@ export class Input {
         await Scripting.sleep(350);
     }
 
+    tap(key) {
+        this.keyboard.notify_keyval(GLib.get_monotonic_time(), key, Clutter.KeyState.PRESSED);
+        this.keyboard.notify_keyval(GLib.get_monotonic_time(), key, Clutter.KeyState.RELEASED);
+    }
+
     async typeText(text) {
         for (const character of text) {
-            const key = character.codePointAt(0);
-            this.keyboard.notify_keyval(GLib.get_monotonic_time(), key, Clutter.KeyState.PRESSED);
-            this.keyboard.notify_keyval(GLib.get_monotonic_time(), key, Clutter.KeyState.RELEASED);
+            this.tap(character.codePointAt(0));
             await Scripting.sleep(20);
         }
         await Scripting.sleep(150);

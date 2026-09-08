@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-uuid='gdx-dock@local'
+uuid='gdx-dock@zerox80.github.io'
 extension_state() {
     local info line
     info=$(LC_ALL=C gnome-extensions info "$1") || return
@@ -34,7 +34,7 @@ restore_on_error() {
     done
 }
 trap restore_on_error ERR
-for other in beauty-dock@local dash-to-panel@jderose9.github.com dash-to-dock@micxgx.gmail.com ubuntu-dock@ubuntu.com; do
+for other in gdx-dock@local beauty-dock@local dash-to-panel@jderose9.github.com dash-to-dock@micxgx.gmail.com ubuntu-dock@ubuntu.com; do
     for active in "${enabled[@]}"; do
         if [[ "$active" == "$other" ]]; then
             gnome-extensions disable "$other"

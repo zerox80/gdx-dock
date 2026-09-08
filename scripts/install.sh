@@ -3,7 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 bash scripts/check.sh
 bash scripts/pack.sh
-gnome-extensions install --force dist/gdx-dock@local.shell-extension.zip
+gnome-extensions install --force dist/gdx-dock@zerox80.github.io.shell-extension.zip
 # Carry settings across the previous project name on the first installation.
 if command -v dconf >/dev/null 2>&1; then
     current_settings=$(dconf dump /org/gnome/shell/extensions/gdx-dock/)

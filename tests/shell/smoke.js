@@ -27,7 +27,7 @@ export async function run() {
     await Scripting.sleep(1800);
     Main.overview.hide();
     await Scripting.sleep(400);
-    const extension = Main.extensionManager.lookup('gdx-dock@local');
+    const extension = Main.extensionManager.lookup('gdx-dock@zerox80.github.io');
     assert(extension?.state === 1, `extension active (state=${extension?.state}; errors=${extension?.error})`);
     const state = extension.stateObj;
     const controller = state._controller;

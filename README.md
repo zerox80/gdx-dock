@@ -42,13 +42,13 @@ bash scripts/install.sh
 bash scripts/activate.sh
 ```
 
-The installer uses GNOME's per-user extension location; no machine-specific paths are required. When migrating from the former Beauty Dock name, it copies existing settings if GDX Dock has no saved settings and `dconf` is available. The activation script disables the old extension and competing docks only after GNOME recognizes GDX Dock. It restores previously enabled docks if startup fails.
+The installer uses GNOME's per-user extension location; no machine-specific paths are required. When migrating from the former Beauty Dock name, it copies existing settings if GDX Dock has no saved settings and `dconf` is available. The public extension UUID is `gdx-dock@zerox80.github.io`. Settings from the earlier `gdx-dock@local` installation are retained because the settings schema and path are unchanged. The activation script disables the earlier local GDX Dock, the old extension and competing docks only after GNOME recognizes GDX Dock. It restores previously enabled docks if startup fails.
 
 If GNOME has already recorded an `ERROR` state, the script prepares the extension for the next login. Using GDX Dock together with Dash to Dock or Dash to Panel is not supported.
 
 ```sh
-gnome-extensions prefs gdx-dock@local
-gnome-extensions disable gdx-dock@local
+gnome-extensions prefs gdx-dock@zerox80.github.io
+gnome-extensions disable gdx-dock@zerox80.github.io
 ```
 
 You can also manage GDX Dock using GNOME's **Extensions** application. Its interface follows GNOME's language settings. The project name remains GDX Dock in every language.

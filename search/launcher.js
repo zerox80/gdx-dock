@@ -105,14 +105,14 @@ export class Launcher {
             return Clutter.EVENT_PROPAGATE;
         });
         this._scope.connect(this.button.menu, 'open-state-changed', (_menu, open) => {
-            if (!open) {
-                this._scheduler.cancel('focus');
+            if (!open)
                 return;
-            }
             this.entry.set_text('');
             this.render();
             this.fitToMonitor();
-            this._scheduler.schedule('focus', 120, () => this.entry.grab_key_focus());
+            // GNOME 50 has already mapped the menu and taken its modal grab.
+            // Accept the next key immediately, including during the animation.
+            this.entry.grab_key_focus();
         });
         this._scope.connect(settings, 'changed', () => {
             this._scheduler.schedule('fit', 0, () => this.fitToMonitor());

@@ -18,7 +18,7 @@ XDG_DATA_DIRS="$fixture_data:${XDG_DATA_DIRS:-/usr/local/share:/usr/share}" \
     XDG_CACHE_HOME="$fixture_data/cache" \
     GDK_BACKEND=wayland GTK_A11Y=none dbus-run-session -- gnome-shell-test-tool --headless \
     --extra-filter=org.gnome.Shell.PerfHelper --extra-filter=org.example.GDXDockTest \
-    --extension "$PWD/dist/gdx-dock@local.shell-extension.zip" \
+    --extension "$PWD/dist/gdx-dock@zerox80.github.io.shell-extension.zip" \
     "$PWD/tests/shell/smoke.js" 2>&1 | python3 scripts/sanitize-log.py | tee artifacts/shell-test.log
 if grep -Eq 'JS ERROR|Gjs-CRITICAL|St-CRITICAL|Script failed|\[GDX Dock\] Cleanup' artifacts/shell-test.log; then
     printf '%s\n' 'The Shell test contains runtime errors. See artifacts/shell-test.log.' >&2
