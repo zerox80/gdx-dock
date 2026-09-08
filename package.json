@@ -1,0 +1,15 @@
+{
+  "name": "gdx-dock",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/unit/*.test.js",
+    "check": "bash scripts/check.sh",
+    "pack": "bash scripts/pack.sh",
+    "test:prefs": "bash scripts/translations.sh compile && glib-compile-schemas --strict schemas && GSETTINGS_BACKEND=memory GSETTINGS_SCHEMA_DIR=$PWD/schemas gjs -m tests/preferences.js",
+    "test:shell": "bash scripts/test-shell.sh",
+    "translations": "bash scripts/translations.sh",
+    "test:i18n": "bash scripts/test-i18n.sh"
+  }
+}

@@ -1,0 +1,258 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: fr\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — fenêtres : %d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "Ouvrir"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "Nouvelle fenêtre"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "Détacher du dock"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "Épingler au dock"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "Déplacer à droite"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "Déplacer à gauche"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "Fermer toutes les fenêtres"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "Vos applications · épinglez-les depuis la recherche"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Espace de travail %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "Rechercher des applications"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "Applications"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "Un bon départ."
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "Vos applications. Un seul endroit."
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "Paramètres de GDX Dock"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "Rechercher une application…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "Toutes les applications"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "Épinglées"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "En cours"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "Haut/Bas : sélectionner ; Entrée : ouvrir"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · Menu des applications"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "Résultats : %d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "Applications : %d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "Application"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s : %s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "Aucune application correspondante."
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "Rien ici pour le moment."
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "Essayez un autre nom ou terme de recherche."
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "Utilisez l’étoile pour épingler des applications au dock."
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "Recherchez pour trouver d’autres applications."
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "Apparence"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "Les modifications s’appliquent immédiatement."
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "Taille des icônes"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "De petite à grande"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "Opacité"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "Pourcentage"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "Couleur d’accentuation"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "Menthe"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "Lilas"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "Bleu"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "Comportement"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "Afficher les espaces de travail"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "Changer d’espace de travail à côté du lanceur"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "Toujours visible"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "Afficher le dock au-dessus des fenêtres plein écran"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "Cliquer pour réduire"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "Lorsqu’une seule fenêtre a déjà le focus"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "Animations"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "Soulever les icônes au survol"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "Clavier et souris"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr ""
+"Clic droit : menu de l’application. Clic du milieu : nouvelle fenêtre. "
+"Défilement : changer de fenêtre."
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Touche Super : menu des applications"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr ""
+"Super ouvre ou ferme la recherche. Super + W ouvre par défaut la vue "
+"d’ensemble de GNOME."
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "Raccourci de recherche supplémentaire"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "Raccourci de la vue d’ensemble"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "Raccourcis personnalisés"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"Exemple : &lt;Super&gt;w. Laissez vide pour désactiver le raccourci. Super "
+"seul ouvre toujours le menu des applications."

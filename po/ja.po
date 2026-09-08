@@ -1,0 +1,258 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: ja\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — ウィンドウ数: %d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "開く"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "新しいウィンドウ"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "ドックから固定を解除"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "ドックに固定"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "右に移動"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "左に移動"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "すべてのウィンドウを閉じる"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "アプリ · 検索からドックに固定"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "ワークスペース %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "アプリを検索"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "アプリ"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "快適なスタート。"
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "アプリをひとつの場所に。"
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "GDX Dock の設定"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "アプリを検索…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "すべてのアプリ"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "固定済み"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "実行中"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "上/下: 選択; Enter: 開く"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · アプリメニュー"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "検索結果: %d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "アプリ数: %d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "アプリケーション"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "一致するアプリがありません。"
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "まだ何もありません。"
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "別の名前や検索語を試してください。"
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "星を使ってアプリをドックに固定できます。"
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "検索してさらにアプリを見つけましょう。"
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "外観"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "変更はすぐに適用されます。"
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "アイコンのサイズ"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "小から大"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "不透明度"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "パーセント"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "アクセントカラー"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "ミント"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "ライラック"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "青"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "動作"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "ワークスペースを表示"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "ランチャーの横でワークスペースを切り替える"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "常に表示"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "全画面ウィンドウの上にドックを表示"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "クリックで最小化"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "ウィンドウが1つだけで、すでにフォーカスされている場合"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "アニメーション"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "ポインターを合わせるとアイコンを持ち上げる"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "キーボードとマウス"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr ""
+"右クリック: アプリメニュー。中クリック: 新しいウィンドウ。スクロール: ウィン"
+"ドウを切り替え。"
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Super キー: アプリメニュー"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr ""
+"Super で検索を開閉します。既定では Super + W で GNOME のアクティビティ画面を"
+"開きます。"
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "追加の検索ショートカット"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "アクティビティ画面のショートカット"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "カスタムショートカット"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"例: &lt;Super&gt;w。空欄にするとショートカットを無効にします。Super 単独では"
+"常にアプリメニューを開きます。"

@@ -1,0 +1,257 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: tr\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — pencereler: %d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "Aç"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "Yeni pencere"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "Dock’tan kaldır"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "Dock’a sabitle"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "Sağa taşı"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "Sola taşı"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "Tüm pencereleri kapat"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "Uygulamalarınız · aramadan sabitleyin"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Çalışma alanı %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "Uygulama ara"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "Uygulamalar"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "Harika bir başlangıç."
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "Uygulamalarınız. Tek bir yerde."
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "GDX Dock ayarları"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "Bir uygulama ara…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "Tüm uygulamalar"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "Sabitlenenler"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "Çalışanlar"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "Yukarı/Aşağı: seç; Enter: aç"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · Uygulama menüsü"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "Sonuçlar: %d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "Uygulamalar: %d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "Uygulama"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "Eşleşen uygulama yok."
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "Burada henüz bir şey yok."
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "Başka bir ad veya arama terimi deneyin."
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "Uygulamaları dock’a sabitlemek için yıldızı kullanın."
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "Daha fazla uygulama bulmak için arayın."
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "Görünüm"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "Değişiklikler hemen uygulanır."
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "Simge boyutu"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "Küçükten büyüğe"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "Opaklık"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "Yüzde"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "Vurgu rengi"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "Nane"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "Leylak"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "Mavi"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "Davranış"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "Çalışma alanlarını göster"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "Başlatıcının yanından çalışma alanlarını değiştir"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "Her zaman görünür"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "Dock’u tam ekran pencerelerin üzerinde göster"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "Küçültmek için tıkla"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "Tek bir pencere zaten odaklanmışken"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "Animasyonlar"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "Üzerine gelindiğinde uygulama simgelerini yükselt"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "Klavye ve fare"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr ""
+"Sağ tık: uygulama menüsü. Orta tık: yeni pencere. Kaydırma: pencere değiştir."
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Super tuşu: uygulama menüsü"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr ""
+"Super aramayı açar veya kapatır. Super + W varsayılan olarak GNOME genel "
+"görünümünü açar."
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "Ek arama kısayolu"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "Genel görünüm kısayolu"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "Özel kısayollar"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"Örnek: &lt;Super&gt;w. Kısayolu kapatmak için boş bırakın. Super tek başına "
+"her zaman uygulama menüsünü açar."

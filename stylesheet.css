@@ -1,0 +1,85 @@
+/* GDX Dock — Ink, soft edges, a little mint. GNOME St CSS, not browser CSS. */
+.gdx-bar { background-color: rgba(23,27,35,0.94); border-top: 1px solid rgba(255,255,255,0.12); color: #eef2f6; font-family: Cantarell, sans-serif; }
+.gdx-surface { background-color: transparent; border: none; box-shadow: none; }
+.gdx-left { padding: 7px; spacing: 4px; }
+.gdx-launcher-button { color: #a2edd1; border-radius: 13px; -minimum-hpadding: 12px; -natural-hpadding: 12px; background-color: rgba(145,232,199,0.09); }
+.gdx-launcher-button:hover, .gdx-launcher-button:active { background-color: rgba(145,232,199,0.18); }
+.gdx-launcher-button:focus { box-shadow: inset 0 0 0 2px #a2edd1; }
+.gdx-launcher-label { spacing: 9px; padding: 10px 0; font-weight: bold; font-size: 13px; }
+.gdx-workspaces { spacing: 0; padding: 0 5px; }
+.gdx-workspace { padding: 14px 5px; border-radius: 8px; }
+.gdx-workspace:hover, .gdx-workspace:focus { background-color: rgba(255,255,255,0.08); }
+.gdx-workspace-dot { width: 5px; height: 5px; border-radius: 3px; background-color: #737e8e; }
+.gdx-workspace-current { width: 19px; height: 5px; border-radius: 3px; background-color: #a2edd1; }
+.gdx-dock { padding: 4px 9px; }
+.gdx-apps { spacing: 4px; }
+.gdx-app { border-radius: 13px; padding: 5px 7px 0; background-color: transparent; transition-duration: 150ms; }
+.gdx-app:hover { background-color: rgba(255,255,255,0.09); }
+.gdx-app.running { background-color: rgba(255,255,255,0.045); }
+.gdx-app.running:hover { background-color: rgba(255,255,255,0.10); }
+.gdx-app.focused { background-color: rgba(145,232,199,0.17); box-shadow: inset 0 0 0 1px rgba(162,237,209,0.15); }
+.gdx-app:active { background-color: rgba(145,232,199,0.23); }
+.gdx-app:focus { box-shadow: inset 0 0 0 2px rgba(162,237,209,0.7); }
+.gdx-indicators { height: 10px; padding-top: 4px; }
+.gdx-running-bar { width: 18px; height: 3px; border-radius: 2px; background-color: #d1dae7; }
+.gdx-app.focused .gdx-running-bar { width: 26px; background-color: #a2edd1; }
+.gdx-window-count { background-color: #3b4655; border: 1px solid #202733; border-radius: 8px; padding: 1px 4px; min-width: 7px; color: #f4f8ff; font-size: 9px; font-weight: bold; text-align: center; }
+.gdx-app.focused .gdx-window-count { background-color: #a2edd1; color: #15271f; }
+.gdx-separator { width: 1px; height: 25px; margin: 0 5px; background-color: rgba(255,255,255,0.12); }
+.gdx-empty-dock { padding: 16px; color: #9ca8b9; font-size: 12px; }
+.gdx-system { padding: 7px 6px 7px 14px; color: #e7edf5; spacing: 2px; border-left: 1px solid rgba(255,255,255,0.10); }
+.gdx-system .panel-button { -minimum-hpadding: 8px; -natural-hpadding: 12px; border-radius: 13px; color: #e7edf5; font-weight: 600; padding: 0; }
+.gdx-system .panel-button:hover, .gdx-system .panel-button:active, .gdx-system .panel-button:focus { background-color: rgba(255,255,255,0.09); box-shadow: none; }
+.gdx-system .system-status-icon { icon-size: 16px; padding: 0 3px; }
+.gdx-system .panel-status-indicators-box { spacing: 6px; }
+.gdx-system .clock-display { padding: 0 5px; }
+.gdx-system .clock { background: none; box-shadow: none; padding: 10px 5px; border-radius: 9px; font-size: 13px; }
+.gdx-tooltip { color: #eef2f6; background-color: #252c37; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 8px 12px; font-size: 12px; box-shadow: 0 4px 12px 0 rgba(0,0,0,0.25); }
+.gdx-notification .notification-banner { background-color: #1c212b; color: #eef2f6; border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; }
+.gdx-popup { color: #eef2f6; -arrow-rise: 8px; -arrow-background-color: #1c212b; -arrow-border-color: rgba(255,255,255,0.12); -arrow-border-width: 1px; -arrow-border-radius: 22px; }
+.gdx-popup .popup-menu-content { background-color: #1c212b; border-radius: 22px; border: 1px solid rgba(255,255,255,0.10); padding: 10px; box-shadow: 0 10px 30px 0 rgba(0,0,0,0.3); }
+.gdx-popup .popup-menu-item { border-radius: 10px; }
+.gdx-popup .popup-menu-item:active { background-color: rgba(162,237,209,0.12); }
+.gdx-popup .quick-toggle:checked { background-color: #a2edd1; color: #14261f; }
+.gdx-popup .quick-menu-toggle .quick-toggle:checked { background-color: #a2edd1; color: #14261f; }
+.gdx-popup .quick-menu-toggle .quick-toggle-menu-button:checked { background-color: #8ed4b9; color: #14261f; }
+.gdx-menu-title { font-weight: bold; color: #a2edd1; }
+.gdx-launcher-popup .popup-menu-content { padding: 0; }
+.gdx-launcher-item { padding: 0; }
+.gdx-launcher-content { padding: 24px; spacing: 15px; }
+.gdx-search-heading { spacing: 10px; }
+.gdx-title { color: #f4f6f9; font-size: 23px; font-weight: 800; }
+.gdx-subtitle { font-size: 12px; color: #929faf; padding-top: 5px; }
+.gdx-icon-button { padding: 10px; border-radius: 12px; color: #a9b5c5; }
+.gdx-icon-button:hover, .gdx-icon-button:focus { background-color: rgba(255,255,255,0.08); color: white; }
+.gdx-search-entry { border-radius: 13px; padding: 13px 14px; color: #f0f5fa; background-color: #12171e; border: 1px solid #3a4652; selection-background-color: #6fbda1; selected-color: #101e19; font-size: 14px; }
+.gdx-search-entry:focus { border-color: #96dfc2; box-shadow: inset 0 0 0 1px rgba(150,223,194,0.15); }
+.gdx-search-entry StIcon { color: #93a5b3; padding-right: 9px; }
+.gdx-filters { spacing: 7px; }
+.gdx-filter { padding: 7px 12px; border-radius: 20px; color: #a0acbc; font-size: 12px; font-weight: 600; }
+.gdx-filter:hover, .gdx-filter:focus { background-color: rgba(255,255,255,0.06); }
+.gdx-filter:checked { background-color: rgba(162,237,209,0.12); color: #a2edd1; }
+.gdx-result-label { font-size: 11px; font-weight: 600; color: #8391a3; padding: 0 4px; }
+.gdx-results { spacing: 4px; }
+.gdx-result-row { border-radius: 12px; border: 1px solid transparent; }
+.gdx-result-row:selected { background-color: rgba(162,237,209,0.08); border-color: rgba(162,237,209,0.16); }
+.gdx-result { padding: 10px; border-radius: 11px; }
+.gdx-result:hover, .gdx-result:focus { background-color: rgba(255,255,255,0.04); }
+.gdx-result-content { spacing: 13px; }
+.gdx-result-name { font-size: 13px; font-weight: 700; color: #eef2f7; }
+.gdx-result-description { font-size: 11px; color: #8897aa; padding-top: 3px; }
+.gdx-pin { padding: 12px; border-radius: 10px; color: #67778a; }
+.gdx-pin:checked { color: #a2edd1; }
+.gdx-pin:hover, .gdx-pin:focus { background-color: rgba(162,237,209,0.10); color: #d6fff0; }
+.gdx-no-results { padding: 35px 0; spacing: 14px; color: #a6b4c3; }
+.gdx-search-footer { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 14px; color: #7f8d9e; font-size: 10px; }
+.gdx-lilac .gdx-launcher-button, .gdx-lilac .gdx-filter:checked, .gdx-lilac .gdx-pin:checked { color: #d4b8ff; }
+.gdx-lilac .gdx-workspace-current, .gdx-lilac .gdx-app.focused .gdx-running-bar { background-color: #d4b8ff; }
+.gdx-lilac .gdx-app.focused { background-color: rgba(212,184,255,0.17); box-shadow: inset 0 0 0 1px rgba(212,184,255,0.15); }
+.gdx-lilac .gdx-app.focused .gdx-window-count { background-color: #d4b8ff; color: #22192c; }
+.gdx-lilac .gdx-search-entry:focus { border-color: #d4b8ff; }
+.gdx-blue .gdx-launcher-button, .gdx-blue .gdx-filter:checked, .gdx-blue .gdx-pin:checked { color: #a2caff; }
+.gdx-blue .gdx-workspace-current, .gdx-blue .gdx-app.focused .gdx-running-bar { background-color: #a2caff; }
+.gdx-blue .gdx-app.focused { background-color: rgba(162,202,255,0.17); box-shadow: inset 0 0 0 1px rgba(162,202,255,0.15); }
+.gdx-blue .gdx-app.focused .gdx-window-count { background-color: #a2caff; color: #172431; }
+.gdx-blue .gdx-search-entry:focus { border-color: #a2caff; }

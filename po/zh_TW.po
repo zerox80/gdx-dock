@@ -1,0 +1,253 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: zh_TW\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — 視窗數：%d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "開啟"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "新增視窗"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "從 Dock 取消釘選"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "釘選至 Dock"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "向右移動"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "向左移動"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "關閉所有視窗"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "你的應用程式 · 透過搜尋釘選"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "工作區 %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "搜尋應用程式"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "應用程式"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "美好的開始。"
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "你的應用程式，盡在一處。"
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "GDX Dock 設定"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "搜尋應用程式…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "所有應用程式"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "已釘選"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "執行中"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "上/下：選取；Enter：開啟"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · 應用程式選單"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "結果：%d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "應用程式：%d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "應用程式"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s：%s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "找不到符合的應用程式。"
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "這裡還沒有內容。"
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "請嘗試其他名稱或搜尋詞。"
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "使用星號將應用程式釘選至 Dock。"
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "透過搜尋尋找更多應用程式。"
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "外觀"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "變更立即生效。"
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "圖示大小"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "從小到大"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "不透明度"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "百分比"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "強調色"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "薄荷綠"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "淡紫色"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "藍色"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "行為"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "顯示工作區"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "在啟動器旁切換工作區"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "一律顯示"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "在全螢幕視窗上方顯示 Dock"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "點擊以最小化"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "僅有一個視窗且已取得焦點時"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "動畫"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "指標停留時抬高應用程式圖示"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "鍵盤與滑鼠"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr "右鍵：應用程式選單。中鍵：新增視窗。捲動：切換視窗。"
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Super 鍵：應用程式選單"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr "按 Super 開啟或關閉搜尋。Super + W 預設開啟 GNOME 概覽。"
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "額外搜尋快捷鍵"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "概覽快捷鍵"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "自訂快捷鍵"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"範例：&lt;Super&gt;w。留空可停用快捷鍵。單獨按 Super 一律開啟應用程式選單。"

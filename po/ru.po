@@ -1,0 +1,258 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: ru\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — окна: %d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "Открыть"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "Новое окно"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "Открепить от дока"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "Закрепить в доке"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "Переместить вправо"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "Переместить влево"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "Закрыть все окна"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "Ваши приложения · закрепляйте их через поиск"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Рабочее место %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "Поиск приложений"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "Приложения"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "Отличное начало."
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "Ваши приложения. В одном месте."
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "Настройки GDX Dock"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "Найти приложение…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "Все приложения"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "Закреплённые"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "Запущенные"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "Вверх/Вниз: выбор; Enter: открыть"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · Меню приложений"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "Результаты: %d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "Приложения: %d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "Приложение"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "Подходящих приложений нет."
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "Здесь пока ничего нет."
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "Попробуйте другое название или поисковый запрос."
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "Используйте звёздочку, чтобы закрепить приложения в доке."
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "Используйте поиск, чтобы найти другие приложения."
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "Изменения применяются сразу."
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "Размер значков"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "От маленьких до больших"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "Непрозрачность"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "Проценты"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "Акцентный цвет"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "Мятный"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "Сиреневый"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "Синий"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "Поведение"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "Показывать рабочие места"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "Переключайте рабочие места рядом с меню приложений"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "Всегда видимый"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "Показывать док поверх полноэкранных окон"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "Нажатие для сворачивания"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "Когда единственное окно уже в фокусе"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "Анимации"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "Приподнимать значки при наведении"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "Клавиатура и мышь"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr ""
+"Правая кнопка: меню приложения. Средняя: новое окно. Прокрутка: переключение "
+"окон."
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Клавиша Super: меню приложений"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr ""
+"Super открывает или закрывает поиск. Super + W по умолчанию открывает обзор "
+"GNOME."
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "Дополнительное сочетание для поиска"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "Сочетание для обзора"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "Свои сочетания клавиш"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"Пример: &lt;Super&gt;w. Оставьте пустым, чтобы отключить сочетание. Одна "
+"клавиша Super всегда открывает меню приложений."

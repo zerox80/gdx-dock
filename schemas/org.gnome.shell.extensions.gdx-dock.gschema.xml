@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.gdx-dock" path="/org/gnome/shell/extensions/gdx-dock/">
+    <key name="icon-size" type="i"><default>40</default><range min="28" max="56"/><summary>App icon size</summary></key>
+    <key name="opacity" type="i"><default>94</default><range min="65" max="100"/><summary>Dock opacity in percent</summary></key>
+    <key name="accent" type="s"><default>'mint'</default><choices><choice value="mint"/><choice value="lilac"/><choice value="blue"/></choices><summary>Accent color</summary></key>
+    <key name="show-workspaces" type="b"><default>true</default><summary>Show workspaces</summary></key>
+    <key name="show-in-fullscreen" type="b"><default>true</default><summary>Show dock over fullscreen windows</summary></key>
+    <key name="click-to-minimize" type="b"><default>true</default><summary>Click to minimize a single focused window</summary></key>
+    <key name="animate" type="b"><default>true</default><summary>Animate icons on hover</summary></key>
+    <key name="open-launcher" type="as"><default>[]</default><summary>Additional app search shortcut</summary></key>
+    <key name="gdx-toggle-overview" type="as"><default>['&lt;Super&gt;w']</default><summary>GNOME overview shortcut</summary></key>
+  </schema>
+</schemalist>

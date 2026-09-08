@@ -1,0 +1,5 @@
+/dist/
+/schemas/gschemas.compiled
+/artifacts/
+node_modules/
+/locale/

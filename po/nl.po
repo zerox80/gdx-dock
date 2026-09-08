@@ -1,0 +1,257 @@
+# GDX Dock translations.
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Initial translations; native-speaker review is welcome.
+msgid ""
+msgstr ""
+"Project-Id-Version: GDX Dock 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/zerox80/gdx-dock/issues\n"
+"POT-Creation-Date: 2026-09-08 11:53+0200\n"
+"PO-Revision-Date: 2026-09-08 00:00+0000\n"
+"Last-Translator: GDX Dock contributors\n"
+"Language-Team: nl\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: dock/appButton.js:90
+#, javascript-format
+msgid "%s — windows: %d"
+msgstr "%s — vensters: %d"
+
+#: dock/appMenu.js:34
+msgid "Open"
+msgstr "Openen"
+
+#: dock/appMenu.js:36
+msgid "New window"
+msgstr "Nieuw venster"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Unpin from dock"
+msgstr "Losmaken van dock"
+
+#: dock/appMenu.js:45 search/launcher.js:199
+msgid "Pin to dock"
+msgstr "Vastmaken aan dock"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move right"
+msgstr "Naar rechts verplaatsen"
+
+#: dock/appMenu.js:55 dock/appMenu.js:58
+msgid "Move left"
+msgstr "Naar links verplaatsen"
+
+#: dock/appMenu.js:64
+msgid "Close all windows"
+msgstr "Alle vensters sluiten"
+
+#: dock/appStrip.js:89
+msgid "Your apps · pin them from search"
+msgstr "Je apps · maak ze vast via zoeken"
+
+#: dock/workspaces.js:30
+#, javascript-format
+msgid "Workspace %d"
+msgstr "Werkblad %d"
+
+#: search/launcher.js:18
+msgid "Search apps"
+msgstr "Apps zoeken"
+
+#: search/launcher.js:23
+msgid "Apps"
+msgstr "Apps"
+
+#: search/launcher.js:50
+msgid "A great start."
+msgstr "Een goede start."
+
+#: search/launcher.js:51
+msgid "Your apps. One place."
+msgstr "Je apps. Eén plek."
+
+#: search/launcher.js:54
+msgid "GDX Dock settings"
+msgstr "GDX Dock-instellingen"
+
+#: search/launcher.js:64
+msgid "Search for an app…"
+msgstr "Zoek een app…"
+
+#: search/launcher.js:71
+msgid "All apps"
+msgstr "Alle apps"
+
+#: search/launcher.js:71
+msgid "Pinned"
+msgstr "Vastgemaakt"
+
+#: search/launcher.js:71 search/launcher.js:189
+msgid "Running"
+msgstr "Actief"
+
+#: search/launcher.js:92
+msgid "Up/Down: Select; Enter: Open"
+msgstr "Omhoog/Omlaag: selecteren; Enter: openen"
+
+#: search/launcher.js:93
+msgid "Super · App menu"
+msgstr "Super · Appmenu"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Results: %d"
+msgstr "Resultaten: %d"
+
+#: search/launcher.js:174
+#, javascript-format
+msgid "Apps: %d"
+msgstr "Apps: %d"
+
+#: search/launcher.js:189
+msgid "Application"
+msgstr "Toepassing"
+
+#: search/launcher.js:199
+#, javascript-format
+msgid "%s: %s"
+msgstr "%s: %s"
+
+#: search/launcher.js:217
+msgid "No matching apps."
+msgstr "Geen overeenkomende apps."
+
+#: search/launcher.js:217
+msgid "Nothing here yet."
+msgstr "Hier staat nog niets."
+
+#: search/launcher.js:219
+msgid "Try another name or search term."
+msgstr "Probeer een andere naam of zoekterm."
+
+#: search/launcher.js:219
+msgid "Use the star to pin apps to your dock."
+msgstr "Gebruik de ster om apps vast te maken aan je dock."
+
+#: search/launcher.js:224
+msgid "Search to find more apps."
+msgstr "Zoek om meer apps te vinden."
+
+#: preferences/page.js:9
+msgid "Appearance"
+msgstr "Uiterlijk"
+
+#: preferences/page.js:10
+msgid "Changes apply immediately."
+msgstr "Wijzigingen worden direct toegepast."
+
+#: preferences/page.js:11
+msgid "Icon size"
+msgstr "Pictogramgrootte"
+
+#: preferences/page.js:11
+msgid "Small to large"
+msgstr "Van klein tot groot"
+
+#: preferences/page.js:15
+msgid "Opacity"
+msgstr "Dekking"
+
+#: preferences/page.js:15
+msgid "Percent"
+msgstr "Percentage"
+
+#: preferences/page.js:20
+msgid "Accent color"
+msgstr "Accentkleur"
+
+#: preferences/page.js:21
+msgid "Mint"
+msgstr "Mint"
+
+#: preferences/page.js:21
+msgid "Lilac"
+msgstr "Lila"
+
+#: preferences/page.js:21
+msgid "Blue"
+msgstr "Blauw"
+
+#: preferences/page.js:34
+msgid "Behavior"
+msgstr "Gedrag"
+
+#: preferences/page.js:36
+msgid "Show workspaces"
+msgstr "Werkbladen tonen"
+
+#: preferences/page.js:36
+msgid "Switch workspaces beside the launcher"
+msgstr "Wissel van werkblad naast de appstarter"
+
+#: preferences/page.js:37
+msgid "Always visible"
+msgstr "Altijd zichtbaar"
+
+#: preferences/page.js:37
+msgid "Show the dock over fullscreen windows"
+msgstr "Toon het dock boven schermvullende vensters"
+
+#: preferences/page.js:38
+msgid "Click to minimize"
+msgstr "Klikken om te minimaliseren"
+
+#: preferences/page.js:38
+msgid "When a single window is already focused"
+msgstr "Wanneer één venster al de focus heeft"
+
+#: preferences/page.js:39
+msgid "Animations"
+msgstr "Animaties"
+
+#: preferences/page.js:39
+msgid "Raise app icons on hover"
+msgstr "Til app-pictogrammen op bij aanwijzen"
+
+#: preferences/page.js:46
+msgid "Keyboard and mouse"
+msgstr "Toetsenbord en muis"
+
+#: preferences/page.js:47
+msgid ""
+"Right-click: app menu. Middle-click: new window. Scroll: switch windows."
+msgstr ""
+"Rechtsklik: appmenu. Middelklik: nieuw venster. Scrollen: van venster "
+"wisselen."
+
+#: preferences/page.js:48
+msgid "Super key: app menu"
+msgstr "Super-toets: appmenu"
+
+#: preferences/page.js:49
+msgid ""
+"Press Super to toggle search. Super + W opens the GNOME overview by default."
+msgstr ""
+"Super opent of sluit zoeken. Super + W opent standaard het GNOME-overzicht."
+
+#: preferences/page.js:51
+msgid "Additional search shortcut"
+msgstr "Extra zoeksneltoets"
+
+#: preferences/page.js:52
+msgid "Overview shortcut"
+msgstr "Sneltoets voor overzicht"
+
+#: preferences/page.js:68
+msgid "Custom shortcuts"
+msgstr "Aangepaste sneltoetsen"
+
+#: preferences/page.js:69
+msgid ""
+"Example: &lt;Super&gt;w. Leave blank to disable the shortcut. Super alone "
+"always opens the app menu."
+msgstr ""
+"Voorbeeld: &lt;Super&gt;w. Laat leeg om de sneltoets uit te schakelen. Super "
+"alleen opent altijd het appmenu."
