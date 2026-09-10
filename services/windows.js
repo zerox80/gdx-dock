@@ -5,7 +5,7 @@ export function appWindows(app) {
     return app.get_windows().filter(window => !window.skip_taskbar);
 }
 
-export function activateApp(app, {newWindow = false, minimize = false} = {}) {
+export function activateApp(app, {newWindow = false, minimize = false, cycle = false} = {}) {
     const windows = appWindows(app);
     if (newWindow && app.can_open_new_window()) {
         app.open_new_window(-1);
@@ -15,6 +15,8 @@ export function activateApp(app, {newWindow = false, minimize = false} = {}) {
         const focused = global.display.focus_window;
         if (minimize && windows.length === 1 && windows[0] === focused)
             windows[0].minimize();
+        else if (cycle && windows.length > 1 && windows.includes(focused))
+            cycleWindows(app, 1);
         else
             Main.activateWindow(windows[0]);
     }

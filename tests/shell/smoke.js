@@ -171,6 +171,34 @@ export async function run() {
     assert(fixtureApp.get_windows().length === 2, 'middle click opens a second real application window');
     assert(fixtureButton.count.mapped && fixtureButton.count.text === '2', 'two windows show a visible number badge');
     await capture('running-apps');
+    const twoWindows = fixtureApp.get_windows();
+    const initialFocus = global.display.focus_window;
+    await input.click(fixtureButton.actor);
+    assert(global.display.focus_window === twoWindows.find(candidate => candidate !== initialFocus),
+        'left click switches to the other window of the focused application');
+    await input.click(fixtureButton.actor);
+    assert(global.display.focus_window === initialFocus,
+        'another left click cycles back with two windows');
+    await input.click(appButton.actor);
+    await input.click(fixtureButton.actor);
+    assert(global.display.focus_window === initialFocus,
+        'left click on a background multi-window app restores its most recently used window');
+    await input.click(fixtureButton.actor, Clutter.BUTTON_MIDDLE);
+    await Scripting.sleep(800);
+    const threeWindows = fixtureApp.get_windows()
+        .sort((a, b) => a.get_stable_sequence() - b.get_stable_sequence());
+    assert(threeWindows.length === 3, 'middle click still opens a third window');
+    const thirdWindow = global.display.focus_window;
+    const startIndex = threeWindows.indexOf(thirdWindow);
+    controller.settings.set_boolean('click-to-minimize', false);
+    for (let step = 1; step <= threeWindows.length; step++) {
+        await input.click(fixtureButton.actor);
+        assert(global.display.focus_window === threeWindows[(startIndex + step) % threeWindows.length],
+            `left click cycles through all three windows in stable order, step ${step}`);
+    }
+    controller.settings.set_boolean('click-to-minimize', true);
+    thirdWindow.delete(global.get_current_time());
+    await Scripting.sleep(250);
     await input.click(appButton.actor);
     await input.click(bar.launcher.button);
     bar.launcher.entry.set_text('GDX Test App');

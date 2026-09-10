@@ -68,6 +68,7 @@ export class AppButton {
                 this.menu.open();
             else
                 activateApp(entry.app, {newWindow: button === 2,
+                    cycle: button === Clutter.BUTTON_PRIMARY,
                     minimize: settings.get_boolean('click-to-minimize')});
         });
         this._scope.connect(this.actor, 'key-press-event', (_actor, event) => {
