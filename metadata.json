@@ -3,10 +3,11 @@
   "name": "GDX Dock",
   "description": "Your desktop, together at the bottom. An app launcher, workspaces, calendar and native GNOME system controls.",
   "shell-version": [
-    "50"
+    "50",
+    "51"
   ],
   "settings-schema": "org.gnome.shell.extensions.gdx-dock",
-  "version": 4,
+  "version": 5,
   "gettext-domain": "gdx-dock",
   "url": "https://github.com/zerox80/gdx-dock"
 }
