@@ -2,7 +2,9 @@
 
 ## Runtime environment
 
-The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. GNOME Shell 51 support (used by Fedora 45 Workstation) has been reviewed against the official porting guide, but has not yet been runtime-tested. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG data, configuration, cache and runtime directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
+Earlier validation used GNOME Shell/Mutter **50.4** on Wayland. The launcher focus correction now passes the complete isolated Shell suite on **51.1** on Wayland, with **130 checks** in this run. GNOME 50 has not been rerun for this correction. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG data, configuration, cache and runtime directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
+
+Before the correction, GNOME 51.1 failed the first immediate-typing check after Super because search lost focus while the menu was opening. Regression checks now cover immediate typing, focus after the opening animation, opening by mouse, switching from the overview, and preserving navigation when an already open menu is opened again. Menu sizing also runs after opening so enlarged text stays within the monitor.
 
 ## Functional checks
 
@@ -13,7 +15,7 @@ The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. GNOME Shel
 - GTK4/libadwaita tests construct preferences and check two-way GSettings bindings, accent selection and shortcut validation using an in-memory settings backend.
 - Static checks validate JavaScript syntax and GSettings schemas. Packaging includes the runtime modules, stylesheet, preferences, schema and compiled translation catalogs.
 
-## Localization validation
+## Earlier GNOME 50.4 localization validation
 
 The complete Shell suite passes in English and Arabic, including real session-language selection, launcher bounds, and keyboard focus at both ends of the scrolling app list. Arabic revealed two issues that are now fixed: taller font metrics could push the launcher off screen, and horizontal viewport offsets needed to be reversed for right-to-left layouts.
 
@@ -36,7 +38,7 @@ Generated logs and screenshots are written to `artifacts/` and are excluded from
 
 ## Limits
 
-GNOME 51 has not been runtime-validated. Physical monitor hotplug and a real lock screen have not been automated. Network connections and power settings are not changed by the tests. Warnings from unavailable services in the isolated session may appear in logs; JavaScript errors and dock cleanup failures cause the Shell test to fail.
+Physical monitor hotplug and a real lock screen have not been automated. Network connections and power settings are not changed by the tests. Warnings from unavailable services in the isolated session may appear in logs; JavaScript errors and dock cleanup failures cause the Shell test to fail.
 
 Updates require a new login because GNOME Shell caches extension modules. The user's running session is not restarted by the tests.
 
