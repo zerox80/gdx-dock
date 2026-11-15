@@ -2,7 +2,7 @@
 
 ## Runtime environment
 
-The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG data, configuration, cache and runtime directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
+The dock has been tested with GNOME Shell/Mutter **50.4** on Wayland. GNOME Shell 51 support (used by Fedora 45 Workstation) has been reviewed against the official porting guide, but has not yet been runtime-tested. Shell integration tests run on a virtual 1280 × 720 monitor, with a separate session bus and temporary XDG data, configuration, cache and runtime directories. Paths are resolved from the checkout at runtime; no developer-specific directory is required.
 
 ## Functional checks
 
@@ -36,8 +36,8 @@ Generated logs and screenshots are written to `artifacts/` and are excluded from
 
 ## Limits
 
-GNOME 51 has not been validated. Physical monitor hotplug and a real lock screen have not been automated. Network connections and power settings are not changed by the tests. Warnings from unavailable services in the isolated session may appear in logs; JavaScript errors and dock cleanup failures cause the Shell test to fail.
+GNOME 51 has not been runtime-validated. Physical monitor hotplug and a real lock screen have not been automated. Network connections and power settings are not changed by the tests. Warnings from unavailable services in the isolated session may appear in logs; JavaScript errors and dock cleanup failures cause the Shell test to fail.
 
-Updates require a new login because GNOME 50 caches extension modules. The user's running session is not restarted by the tests.
+Updates require a new login because GNOME Shell caches extension modules. The user's running session is not restarted by the tests.
 
 All 15 translation catalogs and 61 messages per catalog are checked for completeness and format placeholders. GJS and GTK preferences checks cover every catalog, English, an unknown language, regional fallback and language preference lists. This does not replace native-speaker review or visual testing of every language and writing direction.
