@@ -58,7 +58,7 @@ for other in gdx-dock@local beauty-dock@local dash-to-panel@jderose9.github.com 
 done
 gnome-extensions enable "$uuid"
 
-# GNOME 50 keeps a failed extension in ERROR for the rest of the session;
+# GNOME Shell keeps a failed extension in ERROR for the rest of the session;
 # toggling it cannot retry enable(), and ReloadExtension is no longer supported.
 if [[ "$initial_state" == 'ERROR' ]]; then
     trap - ERR

@@ -1,4 +1,4 @@
-// Executed INSIDE an isolated GNOME Shell 50 test compositor.
+// Executed inside an isolated GNOME Shell test compositor.
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 import Clutter from 'gi://Clutter';

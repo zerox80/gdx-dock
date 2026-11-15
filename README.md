@@ -5,7 +5,7 @@
 
 **GDX** stands for **GNOME Desktop eXtension**.
 
-A standalone **GNOME Shell 50** extension that brings your apps, workspaces and native system controls into a full-width bottom dock. Mint on dark graphite, adjustable colors and subtle animations. No webview or extra desktop process.
+A standalone **GNOME Shell 50 and 51** extension that brings your apps, workspaces and native system controls into a full-width bottom dock. Mint on dark graphite, adjustable colors and subtle animations. No webview or extra desktop process.
 
 ## Features
 
@@ -22,9 +22,9 @@ A standalone **GNOME Shell 50** extension that brings your apps, workspaces and 
 
 ## Requirements
 
-GNOME Shell **50**, GLib and `gnome-extensions`. Installation checks also require Node.js, Python 3 and GNU gettext (`xgettext`, `msgmerge`, `msgfmt`). There are no npm dependencies. Shell integration tests additionally require `gnome-shell-test-tool`; preferences tests require GJS, GTK4 and libadwaita.
+GNOME Shell **50 or 51** (GNOME 51 ships with Fedora 45 Workstation), GLib and `gnome-extensions`. Installation checks also require Node.js, Python 3 and GNU gettext (`xgettext`, `msgmerge`, `msgfmt`). There are no npm dependencies. Shell integration tests additionally require `gnome-shell-test-tool`; preferences tests require GJS, GTK4 and libadwaita.
 
-The extension uses GNOME Shell APIs and is not a standalone dock for other desktop environments. GNOME 51 is not supported yet.
+The extension uses GNOME Shell APIs and is not a standalone dock for other desktop environments. GNOME 51 compatibility has been reviewed against the porting guide, but has not yet been runtime-tested.
 
 ## Installation
 
@@ -36,7 +36,7 @@ cd gdx-dock
 bash scripts/install.sh
 ```
 
-**Log out and back in after installation or an update.** GNOME 50 caches loaded JavaScript modules for the current session; toggling an extension does not reload its updated code. Then activate the dock:
+**Log out and back in after installation or an update.** GNOME Shell caches loaded JavaScript modules for the current session; toggling an extension does not reload its updated code. Then activate the dock:
 
 ```sh
 bash scripts/activate.sh
@@ -90,6 +90,6 @@ Shell tests use a separate session bus and temporary XDG data, configuration, ca
 
 The dock follows the primary monitor; it does not create a second bar on additional monitors. Extensions that restructure GNOME's panel may conflict. Native panel actors are borrowed and restored on cleanup, rather than destroyed. Global GNOME keyboard settings are not rewritten; Super+Escape retains its Wayland shortcut-inhibition function.
 
-The implementation targets the GNOME 50 API generation. See the official [GNOME 50 porting guide](https://gjs.guide/extensions/upgrading/gnome-shell-50.html).
+The implementation targets GNOME Shell 50 and 51. See the official [GNOME 50 porting guide](https://gjs.guide/extensions/upgrading/gnome-shell-50.html) and [GNOME 51 porting guide](https://gjs.guide/extensions/upgrading/gnome-shell-51.html).
 
 License: **MIT**.
