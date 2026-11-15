@@ -12,17 +12,29 @@ import {Disposables} from '../core/disposables.js';
 import {Scheduler} from '../core/scheduler.js';
 import {activateApp} from '../services/windows.js';
 
+class LauncherMenu extends PopupMenu.PopupMenu {
+    open(...args) {
+        const wasOpen = this.isOpen;
+        const result = super.open(...args);
+        // GNOME 51 maps the menu and starts key navigation after emitting
+        // open-state-changed. Focus search only once those steps finish.
+        if (!wasOpen && this.isOpen)
+            this.emit('opened');
+        return result;
+    }
+}
+
 const LauncherButton = GObject.registerClass(
 class GDXLauncherButton extends PanelMenu.Button {
     _init() {
         super._init(0, _('Search apps'));
+        this.setMenu(new LauncherMenu(this, 0, St.Side.BOTTOM));
         this.add_style_class_name('gdx-launcher-button');
         const box = new St.BoxLayout({style_class: 'gdx-launcher-label',
             y_align: Clutter.ActorAlign.CENTER});
         box.add_child(new St.Icon({icon_name: 'view-app-grid-symbolic', icon_size: 21}));
         box.add_child(new St.Label({text: _('Apps'), y_align: Clutter.ActorAlign.CENTER}));
         this.add_child(box);
-        this.menu._boxPointer.updateArrowSide(St.Side.BOTTOM);
         this.menu.actor.add_style_class_name('gdx-popup gdx-launcher-popup');
     }
 });
@@ -109,9 +121,9 @@ export class Launcher {
                 return;
             this.entry.set_text('');
             this.render();
+        });
+        this._scope.connect(this.button.menu, 'opened', () => {
             this.fitToMonitor();
-            // GNOME 50 has already mapped the menu and taken its modal grab.
-            // Accept the next key immediately, including during the animation.
             this.entry.grab_key_focus();
         });
         this._scope.connect(settings, 'changed', () => {

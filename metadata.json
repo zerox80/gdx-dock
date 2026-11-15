@@ -7,7 +7,7 @@
     "51"
   ],
   "settings-schema": "org.gnome.shell.extensions.gdx-dock",
-  "version": 5,
+  "version": 6,
   "gettext-domain": "gdx-dock",
   "url": "https://github.com/zerox80/gdx-dock"
 }

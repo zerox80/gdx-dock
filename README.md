@@ -24,7 +24,7 @@ A standalone **GNOME Shell 50 and 51** extension that brings your apps, workspac
 
 GNOME Shell **50 or 51** (GNOME 51 ships with Fedora 45 Workstation), GLib and `gnome-extensions`. Installation checks also require Node.js, Python 3 and GNU gettext (`xgettext`, `msgmerge`, `msgfmt`). There are no npm dependencies. Shell integration tests additionally require `gnome-shell-test-tool`; preferences tests require GJS, GTK4 and libadwaita.
 
-The extension uses GNOME Shell APIs and is not a standalone dock for other desktop environments. GNOME 51 compatibility has been reviewed against the porting guide, but has not yet been runtime-tested.
+The extension uses GNOME Shell APIs and is not a standalone dock for other desktop environments. The launcher focus correction has passed the isolated Shell suite on GNOME 51.1. See [Validation](docs/VALIDATION.md) for tested environments and remaining limits.
 
 ## Installation
 
